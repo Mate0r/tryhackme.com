@@ -17,7 +17,3 @@ PORT     STATE SERVICE          VERSION
 |_Not valid after:  2024-01-02T11:38:09
 |_ssl-date: 2023-07-04T11:44:37+00:00; -1s from scanner time.
 8021/tcp open  freeswitch-event FreeSWITCH mod_event_socket
-
-## Samba server
-``` mount_smbfs -N //guest@10.10.22.244/websvr mnt/ ```
-
