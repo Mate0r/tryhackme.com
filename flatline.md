@@ -1,1 +1,8 @@
+# Flatline
+https://tryhackme.com/room/flatline
+
+## Nmap
+
+## Samba server
+``` mount_smbfs -N //guest@10.10.22.244/websvr mnt/ ```
 
