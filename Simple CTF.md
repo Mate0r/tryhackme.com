@@ -66,6 +66,55 @@ If we go in pub folder, we found a file name "ForMitch.txt" who contains this hi
 Dammit man... you'te the worst dev i've seen. You set the same pass for the system user, and the password is so weak... i cracked it in seconds. Gosh... what a mess!
 ```
 
-Seems we could try a bruteforce attack on the SSH port !
+Seems we could try a bruteforce attack on the SSH port with the mitch user\
+Let's see the website and we'll try further
 
 # HTTP (port 80)
+Let's see the website !\
+First, we found a robots.txt
+```
+#
+# "$Id: robots.txt 3494 2003-03-19 15:37:44Z mike $"
+#
+#   This file tells search engines not to index your CUPS server.
+#
+#   Copyright 1993-2003 by Easy Software Products.
+#
+#   These coded instructions, statements, and computer programs are the
+#   property of Easy Software Products and are protected by Federal
+#   copyright law.  Distribution and use rights are outlined in the file
+#   "LICENSE.txt" which should have been included with this file.  If this
+#   file is missing or damaged please contact Easy Software Products
+#   at:
+#
+#       Attn: CUPS Licensing Information
+#       Easy Software Products
+#       44141 Airport View Drive, Suite 204
+#       Hollywood, Maryland 20636-3111 USA
+#
+#       Voice: (301) 373-9600
+#       EMail: cups-info@cups.org
+#         WWW: http://www.cups.org
+#
+
+User-agent: *
+Disallow: /
+
+
+Disallow: /openemr-5_0_1_3 
+#
+# End of "$Id: robots.txt 3494 2003-03-19 15:37:44Z mike $".
+#
+```
+
+This could be interesting, maybe there is an user named mike ? in addition of mitch ?\
+We do a feroxbuster to enumarate directories and found a /simple directory
+
+```bash
+$ feroxbuster -u http://simplectf.thm/ -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt
+```
+
+```bash
+301      GET        9l       28w      315c http://simplectf.thm/simple => http://simplectf.thm/simple/
+301      GET        9l       28w      321c http://simplectf.thm/simple/admin => http://simplectf.thm/simple/admin/
+```
