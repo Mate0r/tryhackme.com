@@ -118,3 +118,10 @@ $ feroxbuster -u http://simplectf.thm/ -w /usr/share/seclists/Discovery/Web-Cont
 301      GET        9l       28w      315c http://simplectf.thm/simple => http://simplectf.thm/simple/
 301      GET        9l       28w      321c http://simplectf.thm/simple/admin => http://simplectf.thm/simple/admin/
 ```
+
+So we figure out by visiting this url that there is an webapp named CMS Made Simple in v2.2.8
+<img width="807" alt="image" src="https://github.com/MaTe0r/tryhackme.com/assets/94843357/49b86b59-a666-4f90-baec-db916a14d9f9">
+
+In googling the version, we found that this is vulnerable to a RCE (https://www.exploit-db.com/exploits/46635)
+
+
