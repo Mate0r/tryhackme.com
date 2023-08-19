@@ -49,7 +49,7 @@ feroxbuster -u http://0day.thm/ -w /usr/share/seclists/Discovery/Web-Content/dir
 301      GET        9l       28w      304c http://0day.thm/secret => http://0day.thm/secret/
 ```
 
-At url /backup/ we found a private SSH key
+At url /backup/ we found a private SSH key\
 <img width="570" alt="image" src="https://github.com/MaTe0r/tryhackme.com/assets/94843357/f73e3c99-906a-4a4a-8686-8b5fdb7be74e">
 
 ```
@@ -68,4 +68,18 @@ letmein          (id_rsa)
 1g 0:00:00:00 DONE (2023-08-18 16:01) 100.0g/s 51200p/s 51200c/s 51200C/s teiubesc..letmein
 Use the "--show" option to display all of the cracked passwords reliably
 Session completed.
+```
+
+I tried multiple username like root, 0day, ryan... but no one worked\
+Seems to be a rabbit hole\
+\
+Then i did a nikto
+```bash
+nikto -host 0day.thm
+```
+
+And i found there is a vuln ShellShock in the\
+```bash
++ /cgi-bin/test.cgi: Uncommon header '93e4r0-cve-2014-6278' found, with contents: true.
++ /cgi-bin/test.cgi: Site appears vulnerable to the 'shellshock' vulnerability. See: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6271
 ```
