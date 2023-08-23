@@ -9,7 +9,7 @@ We first add a domain in /etc/hosts so we don't need to remember the IP
 
 We do a nmap with some options :\
 \
--T4 is for have more threads to accelerate the scan\
+-T4 is to have more threads to accelerate the scan\
 -p- is to scan all the ports\
 -sV is to scan the version\
 \
