@@ -1,13 +1,13 @@
 # Introduction
 
-We first add a domain in /etc/hosts so we don't need to remember the IP
+we first add a domain in /etc/hosts so we don't need to remember the IP
 ```bash
 10.10.xx.xx anonymous.thm
 ```
 
 # Enumeration
 
-We do a nmap with some options :\
+we do a nmap with some options :\
 \
 -T4 is to have more threads to accelerate the scan\
 -p- is to scan all the ports\
@@ -19,7 +19,7 @@ we run the scan as sudo so it's doing a SYN scan and not a full TCP connection s
 sudo nmap -T4 -p- -sV anonymous.thm
 ```
 
-We got these open ports
+we got these open ports
 ```bash
 PORT    STATE SERVICE     VERSION
 21/tcp  open  ftp         vsftpd 2.0.8 or later
@@ -30,7 +30,7 @@ Service Info: Host: ANONYMOUS; OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
 # FTP (port 21)
-We'll try to connect to ftp server as anonymous
+we'll try to connect to ftp server as anonymous
 ```bash
 ┌──(kali㉿kali)-[~]
 └─$ ftp anonymous.thm
