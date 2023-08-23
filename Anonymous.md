@@ -16,10 +16,10 @@ We do a nmap with some options :\
 we run the scan as sudo so it's doing a SYN scan and not a full TCP connection so it's faster
 
 ```bash
-sudo nmap -T4 -p- -sV vulnversity.thm
+sudo nmap -T4 -p- -sV anonymous.thm
 ```
 
-We got this result
+We got these open ports
 ```bash
 PORT     STATE SERVICE     VERSION
 21/tcp   open  ftp         vsftpd 3.0.3
@@ -29,4 +29,19 @@ PORT     STATE SERVICE     VERSION
 3128/tcp open  http-proxy  Squid http proxy 3.5.12
 3333/tcp open  http        Apache httpd 2.4.18 ((Ubuntu))
 Service Info: Host: VULNUNIVERSITY; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+```
+
+# FTP (port 21)
+We'll try to connect to ftp server as anonymous
+```bash
+┌──(kali㉿kali)-[~]
+└─$ ftp anonymous.thm
+Connected to anonymous.thm.
+220 NamelessOne's FTP Server!
+Name (anonymous.thm:kali): anonymous
+331 Please specify the password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
 ```
