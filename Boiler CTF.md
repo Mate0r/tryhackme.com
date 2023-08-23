@@ -11,3 +11,6 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 $ rot13 info.txt.decode 
 Just wanted to see if you find it. Lol. Remember: Enumeration is the key !
 ```
+
+
+Joomla
