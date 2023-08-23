@@ -43,3 +43,25 @@ Password:
 Remote system type is UNIX.
 Using binary mode to transfer files.
 ```
+
+we can now list the files in FTP
+```bash
+ftp> ls -la
+229 Entering Extended Passive Mode (|||44253|)
+150 Here comes the directory listing.
+drwxr-xr-x    3 65534    65534        4096 May 13  2020 .
+drwxr-xr-x    3 65534    65534        4096 May 13  2020 ..
+drwxrwxrwx    2 111      113          4096 Jun 04  2020 scripts
+226 Directory send OK.
+ftp> cd scripts
+250 Directory successfully changed.
+ftp> ls -la
+229 Entering Extended Passive Mode (|||22658|)
+150 Here comes the directory listing.
+drwxrwxrwx    2 111      113          4096 Jun 04  2020 .
+drwxr-xr-x    3 65534    65534        4096 May 13  2020 ..
+-rwxr-xrwx    1 1000     1000          314 Jun 04  2020 clean.sh
+-rw-rw-r--    1 1000     1000         1505 Aug 23 09:39 removed_files.log
+-rw-r--r--    1 1000     1000           68 May 12  2020 to_do.txt
+226 Directory send OK.
+```
