@@ -14,3 +14,5 @@ Just wanted to see if you find it. Lol. Remember: Enumeration is the key !
 
 
 Joomla
+
+CVE-2022-23797
