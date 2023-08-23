@@ -28,6 +28,9 @@ PORT     STATE SERVICE        VERSION
 139/tcp  open  netbios-ssn    Microsoft Windows netbios-ssn
 445/tcp  open  microsoft-ds   Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
 3389/tcp open  ms-wbt-server?
+49663/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+49667/tcp open  msrpc         Microsoft Windows RPC
+49669/tcp open  msrpc         Microsoft Windows RPC
 Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
 ```
 
