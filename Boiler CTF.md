@@ -25,3 +25,6 @@ public $host = '127.0.0.1';
         public $dbprefix = 'wyot4_';
         public $live_site = '';
         public $secret = '5O2SmJUZB24rhcfL';
+
+
+        basterd:superduperp@$$
