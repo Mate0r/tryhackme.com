@@ -62,7 +62,7 @@ gpg -d CustomerDetails.gpg
 
 paradox:ShibesAreGreat123\
 0day:OllieIsTheBestDog\
-muirlandoracle:A11D0gsAreAw3s0me\
+muirlandoracle:A11D0gsAreAw3s0me
 
 if we visit the /utech_sitemap.txt
 ```bash
