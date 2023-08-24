@@ -16,3 +16,12 @@ Just wanted to see if you find it. Lol. Remember: Enumeration is the key !
 Joomla
 
 CVE-2022-23797
+
+/tests/
+public $host = '127.0.0.1';
+        public $user = 'joomlauser';
+        public $password = 'passwordz';
+        public $db = 'joomladb';
+        public $dbprefix = 'wyot4_';
+        public $live_site = '';
+        public $secret = '5O2SmJUZB24rhcfL';
