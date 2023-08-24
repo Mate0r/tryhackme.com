@@ -60,9 +60,9 @@ gpg -d CustomerDetails.gpg
 
 <img width="702" alt="image" src="https://github.com/MaTe0r/tryhackme.com/assets/94843357/c9b6c294-9c53-4fca-b7f0-f66aed812f0b">
 
-paradox:ShibesAreGreat123
-0day:OllieIsTheBestDog
-A11D0gsAreAw3s0me
+paradox:ShibesAreGreat123\
+0day:OllieIsTheBestDog\
+muirlandoracle:A11D0gsAreAw3s0me\
 
 if we visit the /utech_sitemap.txt
 ```bash
