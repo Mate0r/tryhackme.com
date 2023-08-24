@@ -42,16 +42,6 @@ Password:
 
 it's not working, let's move to next
 
-# Node.js (port 8081)
-we found that there is an api running on port 8081 (custom one ?) : UltraTech API v0.1.3\
-we do a feroxbuster and find some interisting URL :
-http://ultratech.thm:8081/auth
-http://ultratech.thm:8081/ping
-
-in auth, if we send a GET request with login and password as query parameters, we have invalid credentials\
-the /ping/ url is interisting : we can set a query parameter ip and it pings the ip\
-maybe we can inject one command
-
 # HTTP (port 31331)
 On the homepage, we learn there is 4 employees
 ```bash
@@ -60,12 +50,19 @@ Elf - Overpass' newest intern, Elf. Elf helps maintain the webservers day to day
 MuirlandOracle - HTTPS and networking specialist. Muir's many years of experience and enthusiasm for networking keeps Overpass running, and your sites, online all of the time.\
 NinjaJc01 - James started Overpass, and keeps the business side running. If you have pricing questions or want to discuss how Overpass can help your business, reach out to him!\
 ```
-we found a robots.txt
+we found /backups/ url with a backup.zip file
+in this backup file, there is a gpg file and a key file (used to decrypt the gpg
+we decrypt with
 ```bash
-Allow: *
-User-Agent: *
-Sitemap: /utech_sitemap.txt
+gpg --import priv.key
+gpg -d CustomerDetails.gpg 
 ```
+
+<img width="702" alt="image" src="https://github.com/MaTe0r/tryhackme.com/assets/94843357/c9b6c294-9c53-4fca-b7f0-f66aed812f0b">
+
+paradox:ShibesAreGreat123
+0day:OllieIsTheBestDog
+A11D0gsAreAw3s0me
 
 if we visit the /utech_sitemap.txt
 ```bash
