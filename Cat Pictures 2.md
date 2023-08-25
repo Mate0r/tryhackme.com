@@ -91,3 +91,15 @@ http://catpictures2.thm:3000/v2/CVS/Repository \
 
 [with someenumeration with feroxbuster, we found an url we give us a token for v2 (](http://catpictures2.thm:3000)/v2/token)
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTMwNDc2MzYsIm5iZiI6MTY5Mjk2MTIzNiwiVXNlcklEIjotMX0.HtzFlMPU3VnpAIi2sFnNCO-rCwSpLeKlPmEsmJfHR2w
+
+localhost
+root
+e7128b67d9e7
+root
+127.0.0.1
+root
+root
+localhost
+debian-sys-maint*015CC53362CDFB4ECD2CE756876D4A235EBE8E75
+localhost
+lychee*4E1E4103B94B2548A6A11F31EFEFF7910DDB13D3
