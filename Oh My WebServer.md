@@ -52,4 +52,16 @@ root@4a70924bafa0:/bin#
 ```
 
 now we are root, there is a user.txt in /root/user.txt\
-we see we are at the ip 172.17.0.2 so seems the host is under 172.17.0.1; let's try to nmap it by curl a nmap amd64 to the victim machine
+we see we are at the ip 172.17.0.2 so seems the host is under 172.17.0.1; let's try to nmap it by curl a nmap amd64 to the victim machine\
+\
+here is the result of the nmap on 172.17.0.1
+```
+PORT     STATE  SERVICE
+22/tcp   open   ssh
+80/tcp   open   http
+5985/tcp closed unknown
+5986/tcp open   unknown
+MAC Address: 02:42:33:47:99:50 (Unknown)
+```
+
+let's try to exploit the open port here 5986
