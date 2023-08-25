@@ -78,16 +78,16 @@ there is a call to a script that doens't exist on /opt/backupScript.sh
 # Gitea (port 3000)
 there is a webapp named Gitea that is running on version 1.17.3
 
-http://catpictures2.thm:3000/v2/token
-http://catpictures2.thm:3000/v2/.svn/entries
-http://catpictures2.thm:3000/v2/
-http://catpictures2.thm:3000/v2/.git/HEAD
-http://catpictures2.thm:3000/v2/_vti_bin/_vti_aut/author.dll
-http://catpictures2.thm:3000/v2/_vti_bin/shtml.dll
-http://catpictures2.thm:3000/v2/_vti_bin/_vti_adm/admin.dll
-http://catpictures2.thm:3000/v2/CVS/Root
-http://catpictures2.thm:3000/v2/CVS/Entries
-http://catpictures2.thm:3000/v2/CVS/Repository
+http://catpictures2.thm:3000/v2/token\
+http://catpictures2.thm:3000/v2/.svn/entries\
+http://catpictures2.thm:3000/v2/\
+http://catpictures2.thm:3000/v2/.git/HEAD\
+http://catpictures2.thm:3000/v2/_vti_bin/_vti_aut/author.dll\
+http://catpictures2.thm:3000/v2/_vti_bin/shtml.dll\
+http://catpictures2.thm:3000/v2/_vti_bin/_vti_adm/admin.dll\
+http://catpictures2.thm:3000/v2/CVS/Root\
+http://catpictures2.thm:3000/v2/CVS/Entries\
+http://catpictures2.thm:3000/v2/CVS/Repository\
 
 [with someenumeration with feroxbuster, we found an url we give us a token for v2 (](http://catpictures2.thm:3000)/v2/token)
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTMwNDc2MzYsIm5iZiI6MTY5Mjk2MTIzNiwiVXNlcklEIjotMX0.HtzFlMPU3VnpAIi2sFnNCO-rCwSpLeKlPmEsmJfHR2w
