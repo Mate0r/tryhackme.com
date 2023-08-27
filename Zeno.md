@@ -21,4 +21,7 @@ sudo nmap -T4 -p- -sV zeno.thm
 
 we got these open ports
 ```bash
+PORT      STATE SERVICE VERSION
+22/tcp    open  ssh     OpenSSH 7.4 (protocol 2.0)
+12340/tcp open  http    Apache httpd 2.4.6 ((CentOS) PHP/5.4.16)
 ```
