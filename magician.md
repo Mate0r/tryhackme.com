@@ -26,3 +26,16 @@ PORT     STATE SERVICE VERSION
 8081/tcp open  http    nginx 1.14.0 (Ubuntu)
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
+
+```
+$ ftp magician.thm                                                                                                           
+Connected to magician.thm.
+220 THE MAGIC DOOR
+Name (magician.thm:kali): anonymous
+331 Please specify the password.
+Password: 
+230-Huh? The door just opens after some time? You're quite the patient one, aren't ya, it's a thing called 'delay_successful_login' in /etc/vsftpd.conf ;) Since you're a rookie, this might help you to get started: https://imagetragick.com. You might need to do some little tweaks though...
+230 Login successful.
+ftp> ls -la
+550 Permission denied.
+```
