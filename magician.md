@@ -23,6 +23,7 @@ we got these open ports
 ```bash
 PORT     STATE SERVICE VERSION
 21/tcp   open  ftp     vsftpd 2.0.8 or later
+8080/tcp open  http-proxy
 8081/tcp open  http    nginx 1.14.0 (Ubuntu)
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
