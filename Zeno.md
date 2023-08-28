@@ -43,10 +43,11 @@ define('DB_HOST', 'localhost');
 /etc/systemd/system/multi-user.target.wants/zeno-monitoring.service
 /etc/systemd/system/zeno-monitoring.service
 
-in /etc/fstab, we see the secret_shared folder mounted and we found the password
+in /etc/fstab, we see the secret_shared folder mounted and we found the password of edward
 edward:FrobjoodAdkoonceanJa
 
-/dev/log
+we can use it to connect at SSH
+Once we are connected, we can see there is a sudo right to use reboot
 
-127.0.0.1:25
-127.0.0.1:9000
+so we edit the zeno-monitoring.service ExecStart by : /usr/bin/chmod u+s /bin/bash
+then we connect and could use suid as bash -p
