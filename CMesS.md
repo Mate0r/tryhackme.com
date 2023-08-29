@@ -21,6 +21,18 @@ sudo nmap -T4 -p- -sV cmess.thm
 
 we got these open ports
 ```bash
-PORT    STATE SERVICE     VERSION
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+```
 
+# HTTP (port 80)
+seems there is an webapp running name Gila CMS
+we found a robots.txt 
+```
+User-agent: *
+Disallow: /src/
+Disallow: /themes/
+Disallow: /lib/
 ```
