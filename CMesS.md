@@ -36,3 +36,16 @@ Disallow: /src/
 Disallow: /themes/
 Disallow: /lib/
 ```
+
+andre@cmess.thm:KPFTN_f2yxe%
+
+'host' => 'localhost',
+    'user' => 'root',
+    'pass' => 'r0otus3rpassw0rd',
+    'name' => 'gila',
+
+in /opt/.password.bak
+andres backup password
+UQfsdCB7aAP6
+
+we can abuse a cron and a tar priv esca
