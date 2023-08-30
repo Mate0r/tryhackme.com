@@ -50,3 +50,16 @@ Boris
 let's see the 55007 since it's not SSL so we can test it with telnet directly
 
 we found a boris user with password secret1!
+
+
+username: xenia
+password: RCP90rulez!
+
+severnaya-station.com/gnocertdir
+
+doak:goat
+
+username: dr_doak
+password: 4England!
+
+admin:xWinter1995x!
