@@ -63,3 +63,25 @@ username: dr_doak
 password: 4England!
 
 admin:xWinter1995x!
+
+
+$CFG->dbhost    = 'localhost';
+$CFG->dbname    = 'moodle';
+$CFG->dbuser    = 'moodle';
+$CFG->dbpass    = 'trevelyan006x';
+
+
+id | username |             password             
+----+----------+----------------------------------
+  1 | guest    | aca21c6dbd0538a171ff16550b873d70
+  2 | admin    | de51800b0404d41fcb51203f1e3e524a
+  3 | boris    | efaf365b88dee2fc2029ff20674658a7
+  4 | natalya  | 7a442035ba13c5d22e1e163e2117eb0d
+  6 | xenia    | 116672a0e281b6aa277ef78f53a5f6f9
+  5 | dr_doak  | 488e0292fac2386d877e80f2e3a203bf
+
+
+  boris
+  doak
+  natalya
+  
