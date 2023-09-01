@@ -34,6 +34,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 http://bookstore.thm/api/v2/resources/books/random4
 
 
+
 /api/v2/resources/books/all (Retrieve all books and get the output in a json format)
 /api/v2/resources/books/random4 (Retrieve 4 random records)
 /api/v2/resources/books?id=1(Search by a specific parameter , id parameter)
@@ -43,4 +44,4 @@ http://bookstore.thm/api/v2/resources/books/random4
 
 
 
-http://bookstore.thm:5000/api/v1/resources/books/all
+we have a vulnerable URL for an LFI : http://bookstore.thm:5000/api/v1/resources/books?show=/etc/passwd
