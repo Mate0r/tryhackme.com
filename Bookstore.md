@@ -44,4 +44,7 @@ http://bookstore.thm/api/v2/resources/books/random4
 
 
 
-we have a vulnerable URL for an LFI : http://bookstore.thm:5000/api/v1/resources/books?show=/etc/passwd
+we have a vulnerable URL for an LFI : http://bookstore.thm:5000/api/v1/resources/books?show=/etc/passwd`
+
+we foud the pin of app WERKZEUG_DEBUG_PIN=123-321-135 and found that debug mode on flask is active
+so we can access to /console and run python command to get a reverse shell
