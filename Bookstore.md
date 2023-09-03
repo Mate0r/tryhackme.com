@@ -50,4 +50,46 @@ we foud the pin of app WERKZEUG_DEBUG_PIN=123-321-135 and found that debug mode 
 so we can access to /console and run python command to get a reverse shell
 
 
-1573743953
+we found a try-harder binary with suid\
+we decompile with ghidra and get this source code 
+```
+
+void main(void)
+{
+  long in_FS_OFFSET;
+  uint local_1c;
+  uint local_18;
+  uint local_14;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  setuid(0);
+  local_18 = 0x5db3;
+  puts("What\'s The Magic Number?!");
+  __isoc99_scanf(&DAT_001008ee, &local_1c);
+  local_14 = local_1c ^ 0x1116 ^ local_18;
+  if (local_14 == 0x5dcd21f4) {
+    system("/bin/bash -p");
+  }
+  else {
+    puts("Incorrect Try Harder");
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+```
+
+we can calculate the xor operation 
+```
+0000 0000 0000 0000 0100 1100 1010 0101
+^
+0101 1101 1100 1101 0110 1101 0101 0001
+=
+0101 1101 1100 1101 0010 0001 1111 0100
+```
+
+so we have this decimal result : 1573743953
+bingo, we are root
