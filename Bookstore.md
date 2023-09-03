@@ -48,3 +48,6 @@ we have a vulnerable URL for an LFI : http://bookstore.thm:5000/api/v1/resources
 
 we foud the pin of app WERKZEUG_DEBUG_PIN=123-321-135 and found that debug mode on flask is active
 so we can access to /console and run python command to get a reverse shell
+
+
+1573743953
