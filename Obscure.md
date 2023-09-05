@@ -107,6 +107,8 @@ we can use admin@antisoft.thm with password SecurePassword123! to connect to web
 
 
 
+maybe try to download database anonymisation from odoo.com and install it manually
+
 
 
 
