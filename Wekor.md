@@ -56,6 +56,40 @@ Coupon Code : 1 With ID : wp_jeffrey And With Expire Date Of : $P$BU8QpWD.kHZv3V
 Coupon Code : 1 With ID : wp_yura And With Expire Date Of : $P$B6jSC3m7WdMlLi1/NDb3OFhqv536SV/ Is Valid!
 Coupon Code : 1 With ID : wp_eagle And With Expire Date Of : $P$BpyTRbmvfcKyTrbDzaK1zSPgM7J6QY/ Is Valid!
 
+
+
+
 xxxxxx           (wp_eagle)
 soccer13         (wp_yura)     
 rockyou          (wp_jeffrey)
+
+http://site.wekor.thm/wordpress
+
+
+admin@wekor.thm
+
+
+by connecting with wp_yura, we have more permissions and cat edit for example 404 page php file\
+we can so add a reverse shell
+
+
+so now we have a foothold, we can get the creds of the wordpress database : 
+/** The name of the database for WordPress */
+define( 'DB_NAME', 'wordpress' );
+
+/** MySQL database username */
+define( 'DB_USER', 'root' );
+
+/** MySQL database password */
+define( 'DB_PASSWORD', 'root123@#59' );
+
+/** MySQL hostname */
+define( 'DB_HOST', 'localhost' );
+
+maybe we can try password for an account on the machine (reuse password)
+
+
+user Orka
+
+/usr/bin/python /root/server.py
+/usr/bin/memcached -m 64 -p 11211 -u memcache -l 127.0.0.1
