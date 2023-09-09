@@ -32,3 +32,20 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 
 http://job.empline.thm/careers
+
+
+we use a CVE to do a RCE
+
+config.php of app
+/* Database configuration. */
+define('DATABASE_USER', 'james');
+define('DATABASE_PASS', 'ng6pUFvsGNtw');
+define('DATABASE_HOST', 'localhost');
+define('DATABASE_NAME', 'opencats');
+
+
+in mySQL we found these credentials
+admin          | admin@testdomain.com | b67b5ecc5d8902ba59c65596e4c053ec |
+| cats@rootadmin | 0                    | cantlogin                        |
+| george         |                      | 86d0dfda99dbebc424eb4407947356ac |
+| james          |                      | e53fbdb31890ff3bc129db0e27c473c9 
