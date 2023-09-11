@@ -36,5 +36,7 @@ ash:pikapika
 
 
 Ecgudfxq_EcGmP{Ecgudfxq}
+it's caesar cipher that we can decode (pivot of +14)
 
 UDBrM20wbntDaGFybWFuZGVyfQ==
+it's base64 that we can decode
