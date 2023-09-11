@@ -36,7 +36,7 @@ we can connect as anonymous
 antisoft.thm
 
 
-
+```
 void pass(char *param_1)
 {
   int iVar1;
@@ -87,7 +87,7 @@ undefined8 main(void)
   }
   return 0;
 }
-
+```
 
 
 
@@ -97,32 +97,25 @@ undefined8 main(void)
 SecurePassword123!
 
 
-
+```
 COPY public.res_users (id, active, login, password, company_id, partner_id, create_date, share, write_uid, create_uid, action_id, write_date, signature, password_crypt) FROM stdin;
 3	f	default		1	4	2022-07-23 10:51:25.449364	f	1	1	\N	2022-07-23 10:51:25.449364	\N	\N
 4	f	public	\N	1	5	2022-07-23 10:51:25.449364	t	1	1	\N	2022-07-23 10:51:25.449364	\N	\N
 1	t	admin@antisoft.thm		1	3	\N	f	1	\N	\N	2022-07-23 10:52:10.087949	<span data-o-mail-quote="1">-- <br data-o-mail-quote="1">\nAdministrator</span>	$pbkdf2-sha512$12000$lBJiDGHMOcc4Zwwh5Dzn/A$x.EZ/PrEodzEJ5r4JfQo2KsMZLkLT97xWZ3LsMdgwMuK1Ue.YCzfElODfWEGUOc7yYBB4fMt87ph8Sy5tN4nag
+```
 
 we can use admin@antisoft.thm with password SecurePassword123! to connect to webapp
-
-
-
 maybe try to download database anonymisation from odoo.com and install it manually
 
+we have a wepapp odoo in version 10.0-20190816
+we can exploit the webapp with plugin database anonymation
 
 
+# set the postgres database host, port, user and password according to the environment
+# and pass them as arguments to the odoo process if not present in the config file
+: ${HOST:=${DB_PORT_5432_TCP_ADDR:='db'}}
+: ${PORT:=${DB_PORT_5432_TCP_PORT:=5432}}
+: ${USER:=${DB_ENV_POSTGRES_USER:=${POSTGRES_USER:='odoo'}}}
+: ${PASSWORD:=${DB_ENV_POSTGRES_PASSWORD:=${POSTGRES_PASSWORD:='odoo'}}}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+there is a suid file in /ret
