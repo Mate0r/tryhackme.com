@@ -119,3 +119,60 @@ we can exploit the webapp with plugin database anonymation
 : ${PASSWORD:=${DB_ENV_POSTGRES_PASSWORD:=${POSTGRES_PASSWORD:='odoo'}}}
 
 there is a suid file in /ret
+
+
+
+rax            0x7fffffffe990      140737488349584
+rbx            0x0                 0
+rcx            0x7ffff7fbca00      140737353861632
+rdx            0x7ffff7fbe8d0      140737353869520
+rsi            0x602671            6301297
+rdi            0x7fffffffe991      140737488349585
+rbp            0x7fffffffea00      0x7fffffffea00
+rsp            0x7fffffffea18      0x7fffffffea18
+r8             0x6026f1            6301425
+r9             0x0                 0
+r10            0x602010            6299664
+r11            0x246               582
+r12            0x400550            4195664
+r13            0x7fffffffeb00      140737488349952
+r14            0x0                 0
+r15            0x0                 0
+rip            0x4006bd            0x4006bd <vuln+72>
+eflags         0x246               [ PF ZF IF ]
+cs             0x33                51
+ss             0x2b                43
+ds             0x0                 0
+es             0x0                 0
+fs             0x0                 0
+
+
+
+
+rax            0x7fffffffe990      140737488349584
+rbx            0x0                 0
+rcx            0x7ffff7fbca00      140737353861632
+rdx            0x7ffff7fbe8d0      140737353869520
+rsi            0x602671            6301297
+rdi            0x7fffffffe991      140737488349585
+rbp            0x7f0061616161      0x7f0061616161
+rsp            0x7fffffffea18      0x7fffffffea18
+r8             0x6026f5            6301429
+r9             0x0                 0
+r10            0x602010            6299664
+r11            0x246               582
+r12            0x400550            4195664
+r13            0x7fffffffeb00      140737488349952
+r14            0x0                 0
+r15            0x0                 0
+rip            0x4006bd            0x4006bd <vuln+72>
+eflags         0x246               [ PF ZF IF ]
+cs             0x33                51
+ss             0x2b                43
+ds             0x0                 0
+es             0x0                 0
+fs             0x0                 0
+
+
+https://beta.hackndo.com/retour-a-la-libc/
+
