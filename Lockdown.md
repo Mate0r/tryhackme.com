@@ -43,3 +43,31 @@ private $host = 'localhost';
     private $username = 'cts';
     private $password = 'YOUMKtIXoRjFgMqDJ3WR799tvq2UdNWE';
     private $database = 'cts_db';
+
+
+
+we can found the admin password in database : 3eba6f73c19818c36ba8fea761a3ce6d
+careful, if we modify the admin password then the password is blank and we don't have any more informations of the password hash
+
+with john the hash give us : sweetpandemonium
+
+we can use sudo to antivirus
+the /var/lib/clamav is writable so we can create a custom yara rule to antivirus
+```
+rule test
+{
+  strings:
+    $string = "root"
+  condition:
+    $string
+}
+```
+
+
+we crack the hash of maxine : tiarna
+
+by doing a sudo -l, we can execute any commands
+so we execute sudo su -> we are now root
+
+we can use pwnkit too for privilege escalation
+
