@@ -27,3 +27,36 @@ PORT   STATE SERVICE VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
+# HTTP (port 80)
+by scanning vhosts, we found a subdomain broadcast" 
+broadcast.vulnnet.thm
+
+
+┌──(parallels㉿kali)-[~/hacking/thm/VulnNet]
+└─$ john .htpasswd --wordlist=/usr/share/wordlists/rockyou.txt 
+Warning: detected hash type "md5crypt", but the string is also recognized as "md5crypt-long"
+Use the "--format=md5crypt-long" option to force loading these as that type instead
+Using default input encoding: UTF-8
+Loaded 1 password hash (md5crypt, crypt(3) $1$ (and variants) [MD5 128/128 ASIMD 4x2])
+Will run 2 OpenMP threads
+Press 'q' or Ctrl-C to abort, almost any other key for status
+9972761drmfsls   (developers)     
+1g 0:00:00:30 DONE (2023-09-13 21:30) 0.03231g/s 69825p/s 69825c/s 69825C/s 9978..9972727
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed.
+
+
+//Database Name
+        $DBNAME = 'VulnNet';
+        //Database Username
+        $DBUSER = 'admin';
+        //Database Password
+        $DBPASS = 'VulnNetAdminPass0990';
+
+
+
+oneTWO3gOyac     (id_rsa)
+
+
+we can abuse /var/opt/backpserver.sh car il fait un tar wildcard (*)
+
