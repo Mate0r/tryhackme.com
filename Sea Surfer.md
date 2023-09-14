@@ -45,7 +45,34 @@ by looking to the sitemap, we have an user named kyle
 sales@seasurfer.thm
 support@seasurfer.thm
 
-
 intrenal.seasurfer.thm : we found that domain in comment section (maybe misspelled, more internal ?)
 after further investigation, it is well internal and not intrenal
+
+http://internal.seasurfer.thm/invoices/
+http://internal.seasurfer.thm/maintenance/
+
+the page internal generate a invoice with the library wkhtmltopdf 0.12.5
+
+
+define( 'DB_NAME', 'wordpress' );
+/** Database username */
+define( 'DB_USER', 'wordpressuser' );
+/** Database password */
+define( 'DB_PASSWORD',
+'coolDataTablesMan' );
+/** Database hostname */
+define( 'DB_HOST', 'localhost' );
+
+
+INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
+(1,	'kyle',	'$P$BuCryp52DAdCRIcLrT9vrFNb0vPcyi/',	'kyle',	'kyle@seasurfer.thm',	'http://seasurfer.thm',	'2022-04-17 19:32:10',	'',	0,	'kyle');
+
+
+jenny4ever       (kyle)
+
+we edit the 404 to get a rev shell
+
+we found a password in the logs
+
+
 
