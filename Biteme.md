@@ -34,3 +34,18 @@ we found a running HTTP server\
 by fuzzing directories, we found an url named http://biteme.thm/console/\
 we have a form on this page with a captcha module named securimage
 
+
+/functions.php
+/mfa.php
+/config.php
+/dashboard.php
+
+by fuzzing phps extension, we found theses files :
+/functions.phps
+/config.phps
+/index.phps
+
+user : jason_test_account
+pass : violet
+
+mfa code is 1029
