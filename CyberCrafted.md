@@ -48,3 +48,12 @@ $db_name = "webapp";
 
 
 ssh key password: creepin2006
+
+
+
+we found password in /opt/minecraft/cybercrafted/plugins/LoginSystem/passwords.yml\
+cybercrafted: dcbf543ee264e2d3a32c967d663e979e (JavaEdition>Bedrock)\
+madrinch: 42f749ade7f9e195bf475f37a44cafcb (Password123)\
+
+we could execute the screen command and create a new terminal with Ctrl + a and type 'c'\
+so we now have a root shell
