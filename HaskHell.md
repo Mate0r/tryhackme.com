@@ -1,5 +1,5 @@
 # #1 Introduction
-![image](https://github.com/MaTe0r/tryhackme.com/assets/94843357/24f08b56-9740-44b2-b115-dca148614fa4)
+<img width="646" alt="image" src="https://github.com/MaTe0r/tryhackme.com/assets/94843357/e4b3b7d5-d0ca-4c0b-96d4-82edcf05d58e">
 
 # #2 Nmap
 
