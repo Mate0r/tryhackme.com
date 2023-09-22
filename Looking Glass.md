@@ -20,3 +20,7 @@ we got these open ports
 ```
 
 # #3 user.txt
+
+ssh 10.10.114.165 -p 12849 -oHostKeyAlgorithms=+ssh-rsa
+we found the port is 12849
+
