@@ -47,4 +47,8 @@ http://wwbuddy.thm/change
 http://wwbuddy.thm/profile
 
 
+we can enumerate users with hydra :
+- Roberto : 04/14/1995
+- Henry : 12/12/1212
 
+Roberto:yVnocsXsf%X68wf
