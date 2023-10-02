@@ -30,3 +30,21 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 
 # #3 user.txt
+
+http://wwbuddy.thm/admin (nothing after enumerating)
+
+http://wwbuddy.thm/api (the only available directory is /messages/)
+-> http://wwbuddy.thm/api/messages/
+
+
+
+
+
+http://wwbuddy.thm/login/
+http://wwbuddy.thm/chat.php
+http://wwbuddy.thm/register
+http://wwbuddy.thm/change
+http://wwbuddy.thm/profile
+
+
+
