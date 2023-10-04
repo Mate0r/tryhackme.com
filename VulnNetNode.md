@@ -16,7 +16,8 @@ sudo nmap -T4 -sV -p- vulnnetnode.thm
 
 we got these open ports
 ```bash
-
+PORT     STATE SERVICE VERSION
+8080/tcp open  http    Node.js Express framework
 ```
 
 # #3 user.txt
