@@ -51,3 +51,5 @@ sudo mount -t nfs hijack.thm:/mnt/share /mnt/hijack
 ftpuser:W3stV1rg1n14M0un741nM4m4
 
 admin:uDh3jCQsdcuLhjVkAy5x
+
+rick:N3v3rG0nn4G1v3Y0uUp
