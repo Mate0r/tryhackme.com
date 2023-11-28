@@ -201,4 +201,43 @@ navbar.php
 index.php
 ```
 
+we can check the config.php file and found db credentials\
+maybe we can use it as ssh since there is a rick user existings
+```bash
+www-data@Hijack:/var/www/html$ cat config.php 
+<?php
+$servername = "localhost";
+$username = "rick";
+$password = "N3v3rG0nn4G1v3Y0uUp";
+$dbname = "hijack";
+
+// Create connection
+$mysqli = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($mysqli->connect_error) {
+  die("Connection failed: " . $mysqli->connect_error);
+}
+?>
+www-data@Hijack:/var/www/html$
+```
 rick:N3v3rG0nn4G1v3Y0uUp
+
+
+<img width="863" alt="image" src="https://github.com/Mate0r/tryhackme.com/assets/94843357/640d7076-d471-4643-ae3b-806e0e672a33">
+
+we have a sudo right :
+```bash
+rick@Hijack:~$ sudo -l
+Matching Defaults entries for rick on Hijack:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin, env_keep+=LD_LIBRARY_PATH
+
+User rick may run the following commands on Hijack:
+    (root) /usr/sbin/apache2 -f /etc/apache2/apache2.conf -d /etc/apache2
+rick@Hijack:~$
+```
+
+
+to get the root
+https://atom.hackstreetboys.ph/linux-privilege-escalation-environment-variables/
+
