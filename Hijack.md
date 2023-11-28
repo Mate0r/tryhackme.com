@@ -164,6 +164,10 @@ for password in file:
 
 we found the following password for admin to connect to website\
 
+by looking at write ups afterwards, i saw that the intended way was not this solution\
+the cookie of the PHPSESSID session when connected with any user is that : base64(username:md5(password))\
+so we can bypass the limitation of 5 connections by bruteforcing the cookie
+
 ## HTTP (port 80)
 
 when connected as admin, we have this page that allow us to check a service status running\
