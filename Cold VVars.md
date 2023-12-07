@@ -29,3 +29,9 @@ Service Info: Host: INCOGNITO
 ## Samba (port 139 et 445)
 
 
+## HTTP (port 8080)
+
+we found a first subdirectory /dev/ \
+we found a note.txt in /dev/note.txt
+
+
