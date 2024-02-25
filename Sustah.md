@@ -25,4 +25,6 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 # #3 user.txt
 
+sustah.thm:8085/ping -> PONG
+
 
