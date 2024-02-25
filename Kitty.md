@@ -40,4 +40,4 @@ table: siteusers
 fields: id,username,password,created_at
 
 
-we
+cat /etc/apache2/sites-enabled/dev_site.conf
