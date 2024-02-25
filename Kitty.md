@@ -25,19 +25,6 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 # #3 user.txt
 
 ## HTTP (port 80)
-index.php
-register.php
-welcome.php
-logout.php
-config.php
-
-
-let's uses ffuf to fuzz for
-
-<img width="1319" alt="image" src="https://github.com/MaTe0r/tryhackme.com/assets/94843357/e0298a10-11c3-41ce-b90d-fc8d9f5607a9">
-
-
-
 let's use hydra to try to bruteforce a HTTP account named kitty
 ```
 ┌──(parallels㉿kali)-[~]
@@ -52,16 +39,4 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2024-02-12 13:39:
 1 of 1 target successfully completed, 1 valid password found
 Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2024-02-12 13:40:27
 ```
-
-we found a password crystal associated to chris
-
-<img width="644" alt="image" src="https://github.com/MaTe0r/tryhackme.com/assets/94843357/de9244f8-92cf-47c7-8158-f2fab9f2bbff">
-
-<img width="679" alt="image" src="https://github.com/MaTe0r/tryhackme.com/assets/94843357/71f4fdbf-da07-404a-8334-fe9f3155c7af">
-
-<img width="842" alt="image" src="https://github.com/MaTe0r/tryhackme.com/assets/94843357/4ba1e35a-d462-4a8a-9055-5d083e028b46">
-
-james:hackerrules!
-
-
 
